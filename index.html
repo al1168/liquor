@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neighborhood Wine & Spirits — Great bottles. Fair prices.</title>
+    <meta name="description" content="Warm, modern neighborhood liquor store. Curated wines, trusted favorites, and new discoveries—delivered or ready for pickup." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Neighborhood Wine & Spirits" />
+    <meta property="og:description" content="Discover your next favorite bottle. Curated wines, trusted favorites, and new discoveries." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="logo" href="#/" aria-label="Home">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 2h12v4a6 6 0 0 1-12 0V2Z" fill="currentColor"/>
+            <rect x="7" y="10" width="10" height="12" rx="2" fill="currentColor" opacity=".5"/>
+          </svg>
+          <span>Neighborhood Wine & Spirits</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="#/?category=wine" data-link>Wines</a>
+          <a href="#/?category=spirits" data-link>Spirits</a>
+          <a href="#/?category=liquor" data-link>Liquor</a>
+          <a href="#/about" data-link>About</a>
+          <a href="#/contact" data-link>Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <form id="header-search" role="search" aria-label="Site">
+            <label class="sr-only" for="hdr-search">Search</label>
+            <input id="hdr-search" name="q" type="search" placeholder="Search wines, grapes, regions" autocomplete="off" />
+          </form>
+          <button id="cart-button" class="cart-button" aria-label="Cart" aria-haspopup="dialog" aria-expanded="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 6h15l-2 10H8L6 6Z" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="9" cy="20" r="1.75" fill="currentColor"/>
+              <circle cx="18" cy="20" r="1.75" fill="currentColor"/>
+            </svg>
+            <span class="cart-count" aria-live="polite" aria-atomic="true">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div id="app" class="container" aria-live="polite" aria-busy="false"></div>
+    </main>
+
+    <div class="mobile-sticky" role="region" aria-label="Mobile actions">
+      <button id="mobile-filters-toggle" class="sticky-btn">Filters</button>
+      <button id="mobile-sort-toggle" class="sticky-btn">Sort</button>
+      <button id="mobile-search-toggle" class="sticky-btn">Search</button>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <h2 class="footer-title">Visit Us</h2>
+          <p>123 Maple Ave, Suite A<br/>Hometown, USA</p>
+          <p>Mon–Sat: 10am–8pm · Sun: 12–6pm<br/>
+          <a href="tel:+15551234567">(555) 123-4567</a></p>
+          <div class="social">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </section>
+        <section>
+          <h2 class="footer-title">Newsletter</h2>
+          <form id="newsletter-form" class="newsletter" novalidate>
+            <label class="sr-only" for="newsletter-email">Email</label>
+            <input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required />
+            <button type="submit">Sign Up</button>
+            <p class="newsletter-note">Promotions, new releases, and tastings. No spam.</p>
+          </form>
+        </section>
+      </div>
+      <div class="container small">© <span id="year"></span> Neighborhood Wine & Spirits</div>
+    </footer>
+
+    <div id="modal-root" aria-live="polite"></div>
+
+    <noscript>
+      Please enable JavaScript to shop and search our catalog. We care about accessibility and performance.
+    </noscript>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+  </html>
+
+
